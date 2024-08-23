@@ -1,0 +1,49 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+/* ********** the main container */
+.main-container {
+  position: relative;
+  width: 250px;
+  height: 320px;
+  /* background-color: green; */
+}
+
+/* ********Holds the back and front element */
+.thecard {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: all 0.9s ease;
+  /* background: yellow; */
+  cursor: pointer;
+}
+
+/* ************hover effect (flip the card) */
+.thecard:hover {
+  transform: rotateY(180deg);
+}
+.thefront {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #ffc728;
+  color: #333;
+  border-radius: 6px;
+  padding: 20px;
+}
+.theback {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  background: #da6b6b;
+  color: #333;
+  transform: rotateY(180deg);
+  border-radius: 6px;
+}
